@@ -17,5 +17,5 @@ Estudante de Ciência da Computação na UNA, focado em transformar dados em ins
 ![Brenoh1810](https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=radical)
 
 ### 📫 Como me encontrar
-- [LinkedIn]([LINK_DO_SEU_PERFIL](https://www.linkedin.com/in/breno-henrique-barbosa-correia/))
+- [LinkedIn](https://www.linkedin.com/in/breno-henrique-barbosa-correia/)
 - [E-mail](brenoh18102@gmail.com)
