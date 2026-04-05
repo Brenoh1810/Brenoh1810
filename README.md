@@ -14,7 +14,7 @@ Estudante de Ciência da Computação na UNA, focado em transformar dados em ins
 - **Lógica:** Experiência com algoritmos e estruturas de dados.
 
 ### 📊 Estatísticas do GitHub
-![Brenoh1810](https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=radical)
+![Brenoh1810](https://github-readme-stats.vercel.app/api?username=Brenoh1810&show_icons=true&theme=radical)
 
 ### 📫 Como me encontrar
 - [LinkedIn](https://www.linkedin.com/in/breno-henrique-barbosa-correia/)
