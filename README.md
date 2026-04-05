@@ -14,9 +14,14 @@ Estudante de Ciência da Computação na UNA, focado em transformar dados em ins
 - **Lógica:** Experiência com algoritmos e estruturas de dados.
 
 ### 📊 Estatísticas do GitHub
-![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=Brenoh1810&show_icons=true&theme=radical&include_all_commits=true&count_private=true)
 
-![Linguagens mais usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=Brenoh1810&layout=compact&theme=radical)
+![Status de Contribuição](https://github-readme-streak-stats.herokuapp.com/?user=Brenoh1810&theme=radical)
+
+### 💻 Tecnologias
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![SQL](https://img.shields.io/badge/sql-%2300758F.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=microsoftpowerbi&logoColor=black)
 ### 📫 Como me encontrar
 - [LinkedIn](https://www.linkedin.com/in/breno-henrique-barbosa-correia/)
 - [E-mail](brenoh18102@gmail.com)
