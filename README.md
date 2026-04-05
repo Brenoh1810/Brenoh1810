@@ -29,4 +29,4 @@ Estudante de Ciência da Computação na UNA, focado em transformar dados em ins
 
 ### 📫 Como me encontrar
 - [LinkedIn](https://www.linkedin.com/in/breno-henrique-barbosa-correia/)
-- [E-mail](brenoh18102@gmail.com)
+- E-mail:brenoh18102@gmail.com
