@@ -1,16 +1,21 @@
-## Hi there 👋
+# Olá, eu sou o Breno! 👋
 
-<!--
-**Brenoh1810/Brenoh1810** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Estudante de Ciência da Computação na UNA, focado em transformar dados em insights e construir sistemas robustos.
 
-Here are some ideas to get you started:
+### 🚀 Sobre mim
+- 🎓 Cursando Bacharelado em Ciência da Computação (Previsão: 2028).
+- 🛠️ Atualmente focado em projetos de Backend e dados.
+- 🌍 Fluente em Inglês e entusiasta de hardware e performance.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 💻 Tecnologias e Ferramentas
+- **Linguagens:** Python, SQL, Java, JavaScript.
+- **Dados:** Power BI, Excel Avançado.
+- **DevOps/Tools:** Git, GitHub.
+- **Lógica:** Experiência com algoritmos e estruturas de dados.
+
+### 📊 Estatísticas do GitHub
+![Brenoh1810](https://github-readme-stats.vercel.app/api?username=SEU_USUARIO&show_icons=true&theme=radical)
+
+### 📫 Como me encontrar
+- [LinkedIn]([LINK_DO_SEU_PERFIL](https://www.linkedin.com/in/breno-henrique-barbosa-correia/))
+- [E-mail](brenoh18102@gmail.com)
