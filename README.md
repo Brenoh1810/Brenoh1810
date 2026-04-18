@@ -5,7 +5,7 @@ Estudante de Ciência da Computação na UNA, focado em transformar dados em ins
 ### 🚀 Sobre mim
 - 🎓 Cursando Bacharelado em Ciência da Computação (Previsão: 2028).
 - 🛠️ Atualmente focado em projetos de Backend e dados.
-- 🌍 Fluente em Inglês e entusiasta de hardware e performance.
+- 🌍 Inglês Avançado e entusiasta de hardware e performance.
 
 ### 💻 Linguagens e Tecnologias
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
