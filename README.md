@@ -33,8 +33,12 @@ Estudante de Ciência da Computação na UNA, focado em transformar dados em ins
 
 ### 📊 Estatísticas do GitHub
 
-![Status de Contribuição](https://streak-stats.demolab.com/?user=Brenoh1810&theme=radical)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Brenoh1810&layout=compact&theme=radical&hide_border=true)
+<p>
+  <img src="https://streak-stats.demolab.com/?user=Brenoh1810&theme=radical&hide_border=true" alt="Status de contribuição" />
+</p>
+<p>
+  <img src="./assets/top-langs.svg" alt="Linguagens mais usadas" />
+</p>
 
 ### 📫 Como me encontrar
 - [LinkedIn](https://www.linkedin.com/in/breno-henrique-barbosa-correia/)
