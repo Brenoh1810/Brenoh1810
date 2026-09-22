@@ -51,18 +51,19 @@ THEME = {
 }
 
 
-def token() -> str:
-    return (os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or "").strip()
+def user_pat() -> str:
+    """Only the repo secret PRIVATE_REPO_TOKEN. GITHUB_TOKEN cannot see private repos."""
+    return os.environ.get("GH_TOKEN", "").strip()
 
 
-def api_get(path: str):
+def api_get(path: str, auth: str = ""):
     req = urllib.request.Request(
         f"{API}{path}",
         headers={
             "Accept": "application/vnd.github+json",
             "User-Agent": "profile-top-langs",
             "X-GitHub-Api-Version": "2022-11-28",
-            **({"Authorization": f"Bearer {token()}"} if token() else {}),
+            **({"Authorization": f"Bearer {auth}"} if auth else {}),
         },
     )
     ctx = ssl.create_default_context()
@@ -70,7 +71,7 @@ def api_get(path: str):
         return json.loads(resp.read().decode())
 
 
-def paginate(path: str) -> list:
+def paginate(path: str, auth: str = "") -> list:
     items = []
     parsed = urllib.parse.urlparse(path)
     query = urllib.parse.parse_qs(parsed.query)
@@ -81,7 +82,7 @@ def paginate(path: str) -> list:
         next_path = urllib.parse.urlunparse(
             parsed._replace(query=urllib.parse.urlencode(query, doseq=True))
         )
-        batch = api_get(next_path)
+        batch = api_get(next_path, auth=auth)
         if not batch:
             break
         items.extend(batch)
@@ -91,34 +92,54 @@ def paginate(path: str) -> list:
     return items
 
 
-def authenticated_as_owner() -> bool:
-    if not token():
-        return False
+def describe_pat(pat: str) -> str:
+    if pat.startswith("ghp_"):
+        return "classic PAT"
+    if pat.startswith("github_pat_"):
+        return "fine-grained PAT"
+    return f"value that does not look like a GitHub token (starts with {pat[:6]!r})"
+
+
+def owner_pat() -> str:
+    pat = user_pat()
+    if not pat:
+        print("PRIVATE_REPO_TOKEN is empty; counting public repos only")
+        return ""
     try:
-        me = api_get("/user")
-    except urllib.error.HTTPError:
-        return False
-    return me.get("login", "").lower() == OWNER.lower()
-
-
-def list_repos() -> list[dict]:
-    if authenticated_as_owner():
-        affiliation = "owner,organization_member" if INCLUDE_ORG_REPOS else "owner"
-        repos = paginate(f"/user/repos?affiliation={affiliation}&visibility=all")
+        me = api_get("/user", auth=pat)
+    except urllib.error.HTTPError as exc:
         print(
-            f"Authenticated as {OWNER}; counting public and private repos"
-            + (" plus org repos" if INCLUDE_ORG_REPOS else "")
+            f"PRIVATE_REPO_TOKEN was rejected ({exc.code} {exc.reason}). "
+            "The secret Value must be the token itself, like ghp_... or github_pat_..., "
+            "not the token name. GitHub shows that string only once when you create it. "
+            f"Current secret looks like a {describe_pat(pat)}."
         )
+        return ""
+    login = me.get("login", "")
+    if login.lower() != OWNER.lower():
+        print(f"Token belongs to {login}, expected {OWNER}; counting public repos only")
+        return ""
+    print(
+        f"Authenticated as {login}; counting public and private repos"
+        + (" plus org repos" if INCLUDE_ORG_REPOS else "")
+    )
+    return pat
+
+
+def list_repos() -> tuple[list[dict], str]:
+    pat = owner_pat()
+    if pat:
+        affiliation = "owner,organization_member" if INCLUDE_ORG_REPOS else "owner"
+        repos = paginate(f"/user/repos?affiliation={affiliation}&visibility=all", auth=pat)
     else:
         repos = paginate(f"/users/{OWNER}/repos?type=owner")
-        print("No user PAT with private access; counting public repos only")
 
-    return [r for r in repos if not r.get("fork")]
+    return [r for r in repos if not r.get("fork")], pat
 
 
-def language_totals(repos: list[dict]) -> Counter[str]:
+def language_totals(repos: list[dict], auth: str = "") -> Counter[str]:
     totals: Counter[str] = Counter()
-    public = private = 0
+    public = private = skipped = 0
     for repo in repos:
         if repo.get("private"):
             private += 1
@@ -126,11 +147,15 @@ def language_totals(repos: list[dict]) -> Counter[str]:
             public += 1
         full_name = repo.get("full_name") or f"{OWNER}/{repo['name']}"
         try:
-            langs = api_get(f"/repos/{full_name}/languages")
+            langs = api_get(f"/repos/{full_name}/languages", auth=auth)
         except urllib.error.HTTPError:
+            skipped += 1
             continue
         totals.update(langs)
-    print(f"Counted {public} public and {private} private/non-public repos")
+    print(
+        f"Counted {public} public and {private} private/non-public repos"
+        + (f" ({skipped} skipped)" if skipped else "")
+    )
     return totals
 
 
@@ -207,7 +232,8 @@ def render_svg(rows: list[tuple[str, int, float]]) -> str:
 
 
 def main() -> None:
-    rows = ranked_languages(language_totals(list_repos()))
+    repos, pat = list_repos()
+    rows = ranked_languages(language_totals(repos, auth=pat))
     if not rows:
         raise SystemExit("No language data found")
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
