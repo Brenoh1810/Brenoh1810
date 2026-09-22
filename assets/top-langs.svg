@@ -10,21 +10,21 @@
     <rect x="25" y="58" width="445" height="10" rx="5"/>
   </clipPath>
   <g clip-path="url(#bar)">
-    <rect x="25.00" y="58" width="168.96" height="10" fill="#e34c26"/><rect x="193.96" y="58" width="128.21" height="10" fill="#3572A5"/><rect x="322.17" y="58" width="66.35" height="10" fill="#563d7e"/><rect x="388.51" y="58" width="33.88" height="10" fill="#DA5B0B"/><rect x="422.39" y="58" width="30.93" height="10" fill="#f1e05a"/><rect x="453.32" y="58" width="12.62" height="10" fill="#b07219"/><rect x="465.94" y="58" width="4.06" height="10" fill="#8b949e"/>
+    <rect x="25.00" y="58" width="236.62" height="10" fill="#3178c6"/><rect x="261.62" y="58" width="162.00" height="10" fill="#4F5D95"/><rect x="423.61" y="58" width="16.67" height="10" fill="#58a6ff"/><rect x="440.28" y="58" width="11.61" height="10" fill="#f1e05a"/><rect x="451.89" y="58" width="11.04" height="10" fill="#563d7e"/><rect x="462.93" y="58" width="3.04" height="10" fill="#3572A5"/><rect x="465.97" y="58" width="4.03" height="10" fill="#8b949e"/>
   </g>
   
-      <circle cx="31.0" cy="92.0" r="5" fill="#e34c26"/>
-      <text x="43.0" y="96.0" class="lang">HTML 38.0%</text>
-      <circle cx="253.5" cy="92.0" r="5" fill="#3572A5"/>
-      <text x="265.5" y="96.0" class="lang">Python 28.8%</text>
-      <circle cx="31.0" cy="114.0" r="5" fill="#563d7e"/>
-      <text x="43.0" y="118.0" class="lang">CSS 14.9%</text>
-      <circle cx="253.5" cy="114.0" r="5" fill="#DA5B0B"/>
-      <text x="265.5" y="118.0" class="lang">Jupyter Notebook 7.6%</text>
-      <circle cx="31.0" cy="136.0" r="5" fill="#f1e05a"/>
-      <text x="43.0" y="140.0" class="lang">JavaScript 7.0%</text>
-      <circle cx="253.5" cy="136.0" r="5" fill="#b07219"/>
-      <text x="265.5" y="140.0" class="lang">Java 2.8%</text>
+      <circle cx="31.0" cy="92.0" r="5" fill="#3178c6"/>
+      <text x="43.0" y="96.0" class="lang">TypeScript 53.2%</text>
+      <circle cx="253.5" cy="92.0" r="5" fill="#4F5D95"/>
+      <text x="265.5" y="96.0" class="lang">PHP 36.4%</text>
+      <circle cx="31.0" cy="114.0" r="5" fill="#58a6ff"/>
+      <text x="43.0" y="118.0" class="lang">Blade 3.7%</text>
+      <circle cx="253.5" cy="114.0" r="5" fill="#f1e05a"/>
+      <text x="265.5" y="118.0" class="lang">JavaScript 2.6%</text>
+      <circle cx="31.0" cy="136.0" r="5" fill="#563d7e"/>
+      <text x="43.0" y="140.0" class="lang">CSS 2.5%</text>
+      <circle cx="253.5" cy="136.0" r="5" fill="#3572A5"/>
+      <text x="265.5" y="140.0" class="lang">Python 0.7%</text>
       <circle cx="31.0" cy="158.0" r="5" fill="#8b949e"/>
       <text x="43.0" y="162.0" class="lang">Other 0.9%</text>
 </svg>
