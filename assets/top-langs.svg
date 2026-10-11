@@ -10,21 +10,21 @@
     <rect x="25" y="58" width="445" height="10" rx="5"/>
   </clipPath>
   <g clip-path="url(#bar)">
-    <rect x="25.00" y="58" width="244.39" height="10" fill="#3178c6"/><rect x="269.39" y="58" width="144.35" height="10" fill="#4F5D95"/><rect x="413.74" y="58" width="12.08" height="10" fill="#58a6ff"/><rect x="425.82" y="58" width="10.82" height="10" fill="#178600"/><rect x="436.64" y="58" width="8.90" height="10" fill="#f1e05a"/><rect x="445.54" y="58" width="8.07" height="10" fill="#563d7e"/><rect x="453.61" y="58" width="16.39" height="10" fill="#8b949e"/>
+    <rect x="25.00" y="58" width="256.19" height="10" fill="#3178c6"/><rect x="281.19" y="58" width="146.69" height="10" fill="#4F5D95"/><rect x="427.88" y="58" width="9.69" height="10" fill="#58a6ff"/><rect x="437.57" y="58" width="8.86" height="10" fill="#178600"/><rect x="446.43" y="58" width="6.52" height="10" fill="#563d7e"/><rect x="452.95" y="58" width="5.91" height="10" fill="#00ADD8"/><rect x="458.86" y="58" width="11.14" height="10" fill="#8b949e"/>
   </g>
   
       <circle cx="31.0" cy="92.0" r="5" fill="#3178c6"/>
-      <text x="43.0" y="96.0" class="lang">TypeScript 54.9%</text>
+      <text x="43.0" y="96.0" class="lang">TypeScript 57.6%</text>
       <circle cx="253.5" cy="92.0" r="5" fill="#4F5D95"/>
-      <text x="265.5" y="96.0" class="lang">PHP 32.4%</text>
+      <text x="265.5" y="96.0" class="lang">PHP 33.0%</text>
       <circle cx="31.0" cy="114.0" r="5" fill="#58a6ff"/>
-      <text x="43.0" y="118.0" class="lang">Blade 2.7%</text>
+      <text x="43.0" y="118.0" class="lang">Blade 2.2%</text>
       <circle cx="253.5" cy="114.0" r="5" fill="#178600"/>
-      <text x="265.5" y="118.0" class="lang">C# 2.4%</text>
-      <circle cx="31.0" cy="136.0" r="5" fill="#f1e05a"/>
-      <text x="43.0" y="140.0" class="lang">JavaScript 2.0%</text>
-      <circle cx="253.5" cy="136.0" r="5" fill="#563d7e"/>
-      <text x="265.5" y="140.0" class="lang">CSS 1.8%</text>
+      <text x="265.5" y="118.0" class="lang">C# 2.0%</text>
+      <circle cx="31.0" cy="136.0" r="5" fill="#563d7e"/>
+      <text x="43.0" y="140.0" class="lang">CSS 1.5%</text>
+      <circle cx="253.5" cy="136.0" r="5" fill="#00ADD8"/>
+      <text x="265.5" y="140.0" class="lang">Go 1.3%</text>
       <circle cx="31.0" cy="158.0" r="5" fill="#8b949e"/>
-      <text x="43.0" y="162.0" class="lang">Other 3.7%</text>
+      <text x="43.0" y="162.0" class="lang">Other 2.5%</text>
 </svg>
